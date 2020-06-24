@@ -42,6 +42,7 @@ antigen bundle zsh_reload
 antigen bundle greymd/docker-zsh-completion
 antigen bundle zsh-users/zsh-completions 
 antigen bundle zsh-users/zsh-syntax-highlighting 
+antigen bundle zsh-users/zsh-autosuggestions
 antigen bundle zsh-users/zsh-docker 
 antigen bundle zsh-users/zsh-history-substring-search 
 antigen bundle unixorn/autoupdate-antigen.zshplugin
@@ -83,7 +84,7 @@ alias 'commit'="git add . && git commit"
 # zsh-autosuggestions
 ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE=15
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=240" # gray highlight
-
+ZSH_AUTOSUGGEST_STRATEGY=(history completion)
 
 source /etc/profile
 # user configs
