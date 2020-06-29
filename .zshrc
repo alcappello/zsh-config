@@ -78,7 +78,7 @@ alias 'dc'="docker-compose"
 alias suser='su -'
 alias 'gco'="git checkout"
 alias 'gcom'="git checkout master"
-alias 'commit'="git add . && git commit"
+alias 'commit'="git commit -a"
 
 
 # zsh-autosuggestions
