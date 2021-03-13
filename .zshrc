@@ -40,15 +40,12 @@ antigen bundle pip
 antigen bundle rake
 antigen bundle python
 antigen bundle zsh_reload
-antigen bundle greymd/docker-zsh-completion
-antigen bundle zsh-users/zsh-completions 
-antigen bundle zsh-users/zsh-syntax-highlighting 
+antigen bundle zsh-users/zsh-completions
+antigen bundle zsh-users/zsh-syntax-highlighting
 antigen bundle zsh-users/zsh-autosuggestions
-antigen bundle zsh-users/zsh-docker 
-antigen bundle zsh-users/zsh-history-substring-search 
+antigen bundle zsh-users/zsh-docker
+antigen bundle zsh-users/zsh-history-substring-search
 antigen bundle unixorn/autoupdate-antigen.zshplugin
-antigen bundle nvm
-antigen bundle joel-porquet/zsh-dircolors-solarized
 
 POWERLEVEL9K_INSTALLATION_PATH=$ANTIGEN_BUNDLES/bhilburn/powerlevel9k/powerlevel9k.zsh-theme
 
@@ -74,12 +71,11 @@ alias 'ds'='docker ps --format "table {{.ID}}\t{{.Names}}\t{{.Image}}\t{{.Status
 alias 'ls'='exa'
 alias 'cat'='bat'
 alias 't'='todo.sh'
-alias 'play'='cd ~/Workspace/playscan'
 alias 'dc'="docker-compose"
 alias suser='su -'
 alias 'gco'="git checkout"
 alias 'gcom'="git checkout master"
-alias 'commit'="git commit -a"
+alias 'commit'="git add . && git commit"
 
 
 # zsh-autosuggestions
