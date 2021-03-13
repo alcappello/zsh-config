@@ -13,6 +13,7 @@ export TERM="xterm-256color"
 export EDITOR="vim"
 export PATH="$PATH:$HOME/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"
 
+
 HIST_STAMPS="yyyy-mm-dd"
 UPDATE_ZSH_DAYS="30"
 COMPLETION_WAITING_DOTS="true"
@@ -95,9 +96,5 @@ source /etc/profile
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 
-function expand-alias() {
-	zle _expand_alias
-	zle self-insert
-}
-zle -N expand-alias
-bindkey -M main ' ' expand-alias
+autoload -U +X bashcompinit && bashcompinit
+complete -o nospace -C /usr/local/bin/terraform terraform
