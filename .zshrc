@@ -46,6 +46,8 @@ antigen bundle zsh-users/zsh-autosuggestions
 antigen bundle zsh-users/zsh-docker
 antigen bundle zsh-users/zsh-history-substring-search
 antigen bundle unixorn/autoupdate-antigen.zshplugin
+antigen bundle robertzk/send.zsh
+antigen bundle peterhurford/git-aliases.zsh
 
 POWERLEVEL9K_INSTALLATION_PATH=$ANTIGEN_BUNDLES/bhilburn/powerlevel9k/powerlevel9k.zsh-theme
 
