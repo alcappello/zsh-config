@@ -68,16 +68,17 @@ bindkey '\e[4~' end-of-line
 bindkey '^U' autosuggest-accept
 
 # aliases
-alias 'ubuntu-release'="lsb_release -a"
+alias 'ubuntu-release'='lsb_release -a'
 alias 'ds'='docker ps --format "table {{.ID}}\t{{.Names}}\t{{.Image}}\t{{.Status}}\t{{.RunningFor}}"'
 alias 'ls'='exa'
 alias 'cat'='bat'
 alias 't'='todo.sh'
-alias 'dc'="docker-compose"
-alias suser='su -'
-alias 'gco'="git checkout"
-alias 'gcom'="git checkout master"
-alias 'commit'="git add . && git commit"
+alias 'dc'='docker-compose'
+alias 'tf'='terraform'
+alias 'suser'='su -'
+alias 'gco'='git checkout'
+alias 'gcom'='git checkout master'
+alias 'commit'='git add . && git commit'
 
 
 # zsh-autosuggestions
