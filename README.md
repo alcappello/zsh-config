@@ -6,3 +6,4 @@
 - [Meslo Nerd Font patched for Powerlevel10k](https://github.com/romkatv/powerlevel10k#meslo-nerd-font-patched-for-powerlevel10k). Follow the instructions there to install it and configure your preferred terminal emulator.
 
 ## Install script
+To install everything needed plus all the brews in `brews.txt`, just run `./install.sh`.

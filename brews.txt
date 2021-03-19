@@ -13,6 +13,7 @@ yarn
 daisydisk
 fantastical
 font-jetbrains-mono
+font-meslo-lg-nerd-font
 istat-menus
 jetbrains-toolbox
 slack
