@@ -1,0 +1,11 @@
+antigen
+bat
+exa
+git
+helm
+htop
+httpie
+the_silver_searcher
+vim
+watch
+yarn
