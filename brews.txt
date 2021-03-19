@@ -8,6 +8,7 @@ httpie
 the_silver_searcher
 vim
 watch
+wget
 yarn
 1password
 daisydisk

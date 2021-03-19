@@ -1,6 +1,6 @@
-#!/bin/zsh
+#!/bin/bash
 
-which brew > /dev/null || /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+which brew > /dev/null || curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh
 
 for i in $(cat brews.txt); do
   brew install "$i";
