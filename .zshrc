@@ -79,7 +79,7 @@ alias 'suser'='su -'
 alias 'gco'='git checkout'
 alias 'gcom'='git checkout master'
 alias 'commit'='git add . && git commit'
-
+alias 'k'='kubectl'
 
 # zsh-autosuggestions
 ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE=15
@@ -97,7 +97,7 @@ source /etc/profile
 zstyle ':completion:*:*:docker:*' option-stacking yes
 zstyle ':completion:*:*:docker-*:*' option-stacking yes
 
-source <(kubectl completion zsh)
-
 autoload -U +X bashcompinit && bashcompinit
 complete -o nospace -C /usr/local/bin/terraform terraform
+
+source <(kubectl completion zsh)
