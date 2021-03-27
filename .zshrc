@@ -5,10 +5,6 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-# Ansible managed
-# zsh version: 5.8
-# antigen version: 
-
 export TERM="xterm-256color"
 export EDITOR="vim"
 export PATH="$PATH:$HOME/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"
@@ -18,16 +14,14 @@ HIST_STAMPS="yyyy-mm-dd"
 UPDATE_ZSH_DAYS="30"
 COMPLETION_WAITING_DOTS="true"
 
-# ADOTDIR="$HOME/.antigen"
-
 ANTIGEN_BUNDLES="$HOME/.antigen/bundles"
 ANTIGEN_PLUGIN_UPDATE_DAYS="30"
 ANTIGEN_SYSTEM_UPDATE_DAYS="30"
+ANTIGEN_CACHE=false
 
 source "/usr/local/share/antigen/antigen.zsh"
 
 antigen use oh-my-zsh
-
 
 antigen bundle brew
 antigen bundle docker
@@ -47,7 +41,6 @@ antigen bundle zsh-users/zsh-docker
 antigen bundle zsh-users/zsh-history-substring-search
 antigen bundle unixorn/autoupdate-antigen.zshplugin
 antigen bundle robertzk/send.zsh
-antigen bundle peterhurford/git-aliases.zsh
 
 POWERLEVEL9K_INSTALLATION_PATH=$ANTIGEN_BUNDLES/bhilburn/powerlevel9k/powerlevel9k.zsh-theme
 
@@ -68,18 +61,16 @@ bindkey '\e[4~' end-of-line
 bindkey '^U' autosuggest-accept
 
 # aliases
-alias 'ubuntu-release'='lsb_release -a'
-alias 'ds'='docker ps --format "table {{.ID}}\t{{.Names}}\t{{.Image}}\t{{.Status}}\t{{.RunningFor}}"'
+alias 'ds'='docker ps -a --format "table {{.ID}}\t{{.Names}}\t{{.Image}}\t{{.Status}}\t{{.RunningFor}}"'
 alias 'ls'='exa'
 alias 'cat'='bat'
-alias 't'='todo.sh'
 alias 'dc'='docker-compose'
 alias 'tf'='terraform'
-alias 'suser'='su -'
 alias 'gco'='git checkout'
 alias 'gcom'='git checkout master'
 alias 'commit'='git add . && git commit'
 alias 'k'='kubectl'
+alias 's'='git status'
 
 # zsh-autosuggestions
 ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE=15
@@ -101,3 +92,4 @@ autoload -U +X bashcompinit && bashcompinit
 complete -o nospace -C /usr/local/bin/terraform terraform
 
 source <(kubectl completion zsh)
+source <(helm completion zsh)
